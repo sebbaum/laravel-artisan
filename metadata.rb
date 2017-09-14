@@ -1,7 +1,7 @@
 name 'laravel-artisan'
 maintainer 'Sebastian Baum'
 maintainer_email 'seb.baum@googlemail.com'
-license 'All Rights Reserved'
+license 'Apache-2.0'
 description "Run laravel's artisan commands"
 long_description "Run laravel's artisan commands on remote nodes"
 version '0.1.0'
