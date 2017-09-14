@@ -6,6 +6,7 @@ description "Run laravel's artisan commands"
 long_description "Run laravel's artisan commands on remote nodes"
 version '0.1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
+supports 'ubuntu', '= 16.04'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
