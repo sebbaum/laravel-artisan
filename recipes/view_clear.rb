@@ -1,12 +1,12 @@
 #
 # Cookbook:: laravel-artisan
-# Recipe:: down
+# Recipe:: view:clear
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 include_recipe 'laravel-artisan::default'
 
-COMMAND = 'down'
+COMMAND = 'view:clear'
 
 execute "php artisan #{COMMAND}" do
   cwd node['laravel-artisan']['path']

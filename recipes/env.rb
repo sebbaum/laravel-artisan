@@ -1,12 +1,12 @@
 #
 # Cookbook:: laravel-artisan
-# Recipe:: down
+# Recipe:: env
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 include_recipe 'laravel-artisan::default'
 
-COMMAND = 'down'
+COMMAND = 'env'
 
 execute "php artisan #{COMMAND}" do
   cwd node['laravel-artisan']['path']

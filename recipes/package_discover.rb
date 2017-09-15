@@ -1,12 +1,12 @@
 #
 # Cookbook:: laravel-artisan
-# Recipe:: down
+# Recipe:: package:discover
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 include_recipe 'laravel-artisan::default'
 
-COMMAND = 'down'
+COMMAND = 'package:discover'
 
 execute "php artisan #{COMMAND}" do
   cwd node['laravel-artisan']['path']

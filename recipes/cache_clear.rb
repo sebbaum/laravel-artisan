@@ -1,12 +1,12 @@
 #
 # Cookbook:: laravel-artisan
-# Recipe:: down
+# Recipe:: cache_clear
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 include_recipe 'laravel-artisan::default'
 
-COMMAND = 'down'
+COMMAND = 'cache:clear'
 
 execute "php artisan #{COMMAND}" do
   cwd node['laravel-artisan']['path']

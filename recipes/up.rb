@@ -6,8 +6,10 @@
 
 include_recipe 'laravel-artisan::default'
 
-execute 'php artisan up' do
+COMMAND = 'up'
+
+execute "php artisan #{COMMAND}" do
   cwd node['laravel-artisan']['path']
-  command "#{node['laravel-artisan']['call']} up #{node['laravel-artisan']['verbosity']}"
+  command "#{node['laravel-artisan']['call']} #{COMMAND} #{node['laravel-artisan']['verbosity']}"
   action :run
 end
