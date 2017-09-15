@@ -2,6 +2,8 @@
 
 ## 0.3.0
 * Added support of `php artisan cache:clear`
+* Added support of `php artisan config:cache`
+* Added support of `php artisan config:clear`
 
 
 ## 0.2.0
