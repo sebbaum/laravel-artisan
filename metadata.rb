@@ -4,7 +4,7 @@ maintainer_email 'seb.baum@googlemail.com'
 license 'Apache-2.0'
 description "Run laravel's artisan commands"
 long_description "Run laravel's artisan commands on remote nodes"
-version '0.1.0'
+version '0.2.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 supports 'ubuntu', '= 16.04'
 
