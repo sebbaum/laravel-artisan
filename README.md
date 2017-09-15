@@ -2,10 +2,11 @@
 
 [![Cookbook Version](https://img.shields.io/cookbook/v/laravel-artisan.svg)](https://img.shields.io/cookbook/v/laravel-artisan.svg) [![Github Release](https://img.shields.io/github/release/sebbaum/laravel-artisan.svg)](https://img.shields.io/github/release/sebbaum/laravel-artisan.svg) [![Github Issues](https://img.shields.io/github/issues/sebbaum/laravel-artisan.svg)](https://img.shields.io/github/issues/sebbaum/laravel-artisan.svg) [![license](https://img.shields.io/github/license/sebbaum/laravel-artisan.svg)](https://img.shields.io/github/license/sebbaum/laravel-artisan.svg)
 
-Did you ever want to to run Laravel's php artisan commands on an automated infrastructure? If you are using Chef then this cookbook is for you.
+Did you ever want to to run [Laravel's php artisan commands](https://laravel.com/docs/5.5/artisan) on an automated infrastructure? If you are using [Chef](https://www.chef.io/) then this cookbook is for you.
 
 ## Scope
-This cookbook supports some of the artisan commands, that are useful on a load balanced server infrastructure. Commands that are particular useful for development are not supported.
+This cookbook supports some of the artisan commands, that are useful on a load balanced server infrastructure.  
+Commands that are particular useful for development are not supported.
 
 ### Supported commands:
 * down
