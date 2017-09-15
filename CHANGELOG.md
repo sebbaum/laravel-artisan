@@ -4,6 +4,7 @@
 * Added support of `php artisan cache:clear`
 * Added support of `php artisan config:cache`
 * Added support of `php artisan config:clear`
+* Added support of `php artisan clear-compiled`
 * Extracted each `php artisan` command in a variable.
 
 
