@@ -1,6 +1,6 @@
 # Laravel-Artisan Cookbook
 
-[![Cookbook Version](https://img.shields.io/cookbook/v/laravel-artisan.svg)](https://img.shields.io/cookbook/v/laravel-artisan.svg) [![Github Release](https://img.shields.io/github/release/sebbaum/laravel-artisan.svg)](https://img.shields.io/github/release/sebbaum/laravel-artisan.svg) [![Github Issues](https://img.shields.io/github/issues/sebbaum/laravel-artisan.svg)](https://img.shields.io/github/issues/sebbaum/laravel-artisan.svg) [![license](https://img.shields.io/github/license/sebbaum/laravel-artisan.svg)](https://img.shields.io/github/license/sebbaum/laravel-artisan.svg)
+[![Cookbook Version](https://img.shields.io/cookbook/v/laravel-artisan.svg)](https://supermarket.chef.io/cookbooks/laravel-artisan) [![Github Release](https://img.shields.io/github/release/sebbaum/laravel-artisan.svg)](https://github.com/sebbaum/laravel-artisan/releases) [![Github Issues](https://img.shields.io/github/issues/sebbaum/laravel-artisan.svg)](https://github.com/sebbaum/laravel-artisan/issues) [![license](https://img.shields.io/github/license/sebbaum/laravel-artisan.svg)](https://github.com/sebbaum/laravel-artisan/blob/master/LICENSE)
 
 Did you ever want to to run [Laravel's php artisan commands](https://laravel.com/docs/5.5/artisan) on an automated infrastructure? If you are using [Chef](https://www.chef.io/) then this cookbook is for you.
 
