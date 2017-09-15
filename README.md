@@ -69,8 +69,10 @@ Using AWS Opsworks you can pass in the path via custom json:
 ```
 
 ### Recipes
+* `laravel-artisan::clear-compiled`	Remove the compiled class file
 * `laravel-artisan::down` 			Put the application into maintenance mode.
 * `laravel-aritsan::up` 			Bring the application out of maintenance mode.
 * `laravel-artisan::cache_clear`	Flush the application cache.
 * `laravel-artisan::config_cache`	Create a cache file for faster configuration loading.
 * `laravel-artisan::config_clear`	Remove the configuaration cache file.
+* `laravel-artisan::view_clear`		Clear all compiled view files.
