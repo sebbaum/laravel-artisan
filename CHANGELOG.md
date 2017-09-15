@@ -1,5 +1,9 @@
 # Laravel-Artisan Cookbook Changelog
 
+## 0.4.0
+* Added support of `php artisan schedule:run`
+* Added a possibility to disable running of `php artisan schedule:run`
+
 ## 0.3.0
 * Added support of `php artisan cache:clear`
 * Added support of `php artisan config:cache`

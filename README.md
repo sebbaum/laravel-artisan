@@ -83,4 +83,6 @@ Using AWS Opsworks you can pass in the path via custom json:
 * `laravel-artisan::config_cache`		Create a cache file for faster configuration loading.
 * `laravel-artisan::config_clear`		Remove the configuaration cache file.
 * `laravel-artisan::package_discover`	Rebuild the cached package manifest.
+* `laravel-artisan::schedule_run`		Run the scheduled commands.
+* `laravel-artisan::schedule_remove`	Remove the cronjob that runs `php artisan schedule:run`
 * `laravel-artisan::view_clear`			Clear all compiled view files.
