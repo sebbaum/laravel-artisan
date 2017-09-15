@@ -11,9 +11,6 @@ Commands that are particular useful for development are not supported.
 ### Supported commands:
 * down
 * up
-* cache:clear
-* config:clear
-* view:clear
 * ... and more to come
 
 ## Requirements
@@ -31,3 +28,42 @@ Supported Environments:
 Currently none.
 
 ## Usage
+Place a dependency on the mysql cookbook in your cookbook's metadata.rb
+
+```ruby
+depends 'mysql', '~> 8.0'
+```
+or add the dependency in your Berksfile:
+```ruby
+cookbook 'laravel-artisan'
+```
+
+Then, you can run the recipes using Chef's runlist. Right away this will throw an Exception. To get it work properly you have
+to pass a path to the directory where the `artisan` file is located.
+
+### Envirionment file
+Passing the path to the artisan file via an environment file:
+```json
+{
+  "name": "development",
+  "description": "Vagrant Development Environment",
+  "default_attributes": {
+    "laravel-artisan": {
+      "path": "<path-to-artisan-file>"
+    }
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment"
+}
+
+```
+
+### AWS Opsworks
+Using AWS Opsworks you can pass in the path via custom json:
+```json
+
+  "laravel-artisan": {
+    "path": "<path-to-artisan-file>"
+  }
+}
+```
