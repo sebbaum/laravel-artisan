@@ -67,3 +67,8 @@ Using AWS Opsworks you can pass in the path via custom json:
   }
 }
 ```
+
+### Recipes
+* `laravel-artisan::down` 			Put the application into maintenance mode.
+* `laravel-aritsan::up` 			Bring the application out of maintenance mode.
+* `laravel-artisan::cache_clear`	Flush the application cache.
