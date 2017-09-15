@@ -9,9 +9,15 @@ This cookbook supports some of the artisan commands, that are useful on a load b
 Commands that are particular useful for development are not supported.
 
 ### Supported commands:
+* clear-compiled
 * down
+* env
 * up
-* ... and more to come
+* cache:clear
+* config:cache
+* config:clear
+* package:discover
+* view_clear
 
 ## Requirements
 * Chef 12.7 or higher
@@ -31,9 +37,10 @@ Currently none.
 Place a dependency on the mysql cookbook in your cookbook's metadata.rb
 
 ```ruby
-depends 'mysql', '~> 8.0'
+depends 'laravel-artisan'
 ```
-or add the dependency in your Berksfile:
+
+or add the dependency in your Berksfile:  
 ```ruby
 cookbook 'laravel-artisan'
 ```
@@ -55,7 +62,6 @@ Passing the path to the artisan file via an environment file:
   "json_class": "Chef::Environment",
   "chef_type": "environment"
 }
-
 ```
 
 ### AWS Opsworks
