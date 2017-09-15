@@ -61,7 +61,7 @@ Passing the path to the artisan file via an environment file:
 ### AWS Opsworks
 Using AWS Opsworks you can pass in the path via custom json:
 ```json
-
+{
   "laravel-artisan": {
     "path": "<path-to-artisan-file>"
   }
