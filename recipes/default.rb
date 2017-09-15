@@ -6,8 +6,24 @@
 
 # Run the php artisan command with the `help` argument in order to print the help
 # and check that the path to the executable is set properly.
-execute 'php artisan help' do
-  cwd node['laravel-artisan']['path']
-  command "#{node['laravel-artisan']['call']} help #{node['laravel-artisan']['verbosity']}"
-  action :run
+
+
+## Check if the path to the artisan file is given
+if node['laravel-artisan']['path'].empty?
+  raise(Exception, 'Missing path to artisan file!');
 end
+
+# Check if the artisan file exists at the given location
+unless File.exists?("#{node['laravel-artisan']['path']}/artisan")
+	raise(Exception, "No artisan file at the given locatation: #{node['laravel-artisan']['path']}")
+end
+
+log 'checking laravel artisan prerequisits' do
+	message 'Laravel artsan prerequisits check [SUCCESS]'
+end
+
+#execute 'php artisan help' do
+#  cwd node['laravel-artisan']['path']
+#  command "#{node['laravel-artisan']['call']} help #{node['laravel-artisan']['verbosity']}"
+#  action :run
+#end
