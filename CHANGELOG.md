@@ -1,5 +1,8 @@
 # Laravel-Artisan Cookbook Changelog
 
+## 0.5.0
+* Added support of `php artisan migrate:status`
+
 ## 0.4.0
 * Added support of `php artisan schedule:run`
 * Added a possibility to disable running of `php artisan schedule:run`
