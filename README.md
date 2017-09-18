@@ -17,7 +17,8 @@ Commands that are particular useful for development are not supported.
 * config:cache
 * config:clear
 * package:discover
-* view_clear
+* schedule:run
+* view:clear
 
 ## Requirements
 * Chef 12.7 or higher
