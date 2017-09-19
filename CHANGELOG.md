@@ -2,6 +2,7 @@
 
 ## 0.5.0
 * Added support of `php artisan migrate:status`
+* Added support of `php artisan queue:work`
 
 ## 0.4.0
 * Added support of `php artisan schedule:run`
