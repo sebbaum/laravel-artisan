@@ -1,5 +1,8 @@
 # Laravel-Artisan Cookbook Changelog
 
+## 0.5.1
+* Added missing changelog for 0.5.0 features
+
 ## 0.5.0
 * Added support of `php artisan migrate:status`
 * Added support of `php artisan queue:work`
