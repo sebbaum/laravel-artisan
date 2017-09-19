@@ -1,0 +1,1 @@
+default['laravel-artisan']['supervisor']['conf_dir'] = "/etc/supervisor/conf.d"
