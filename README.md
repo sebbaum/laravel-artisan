@@ -18,6 +18,7 @@ Commands that are particular useful for development are not supported.
 * config:clear
 * migrate:status
 * package:discover
+* queue:work
 * schedule:run
 * view:clear
 
@@ -86,6 +87,8 @@ Using AWS Opsworks you can pass in the path via custom json:
 * `laravel-artisan::config_clear`		  - Remove the configuaration cache file.
 * `laravel-artisan::migrate_status`   - Show the status of each migration.
 * `laravel-artisan::package_discover` -	Rebuild the cached package manifest.
+* `laravel-artisan::queue_work`       - Start processing jobs on the queue as a daemon.
+* `laravel-artisan::queue_stop`       - Stop processing jobs on the queue as a daemon.
 * `laravel-artisan::schedule_run`		  - Run the scheduled commands.
 * `laravel-artisan::schedule_remove`  -	Remove the cronjob that runs `php artisan schedule:run`
 * `laravel-artisan::view_clear`			  - Clear all compiled view files.

@@ -1,3 +1,4 @@
+# Stop the artisan queue:work process.
 #
 # Cookbook:: laravel-artisan
 # Recipe:: queue_stop
