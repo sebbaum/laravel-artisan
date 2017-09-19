@@ -1,3 +1,9 @@
+# Start a laravel queue worker process.
+# 
+# In order to run it as a service supervisor is installed and configured.
+# For more details see:
+# 	- https://laravel.com/docs/5.5/queues#supervisor-configuration
+#
 #
 # Cookbook:: laravel-artisan
 # Recipe:: queue_work
@@ -18,12 +24,14 @@ template "create supervisor conf for #{node['laravel-artisan']['queue']['worker_
   variables node['laravel-artisan']['queue']
 end
 
+### Stop the supervisor service
 service 'stop supervisor' do
   service_name 'supervisor'
   supports :stop => true, :status => true, :restart => true, :reload => true
   action :stop
 end
 
+### Start the supervisor service
 service 'start supervisor' do
   service_name 'supervisor'
   supports :start => true, :status => true, :restart => true, :reload => true
