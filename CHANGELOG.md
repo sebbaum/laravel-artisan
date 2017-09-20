@@ -1,5 +1,9 @@
 # Laravel-Artisan Cookbook Changelog
 
+## 0.6.0
+* Added support for `php artisan route cache`
+* Added support for `php artisan route clear`
+
 ## 0.5.1
 * Added missing changelog for 0.5.0 features
 
