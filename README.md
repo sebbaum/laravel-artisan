@@ -96,3 +96,7 @@ Using AWS Opsworks you can pass in the path via custom json:
 * `laravel-artisan::schedule_run`		  - Run the scheduled commands.
 * `laravel-artisan::schedule_remove`  -	Remove the cronjob that runs `php artisan schedule:run`
 * `laravel-artisan::view_clear`			  - Clear all compiled view files.
+
+## License and Authors
+
+Author:: Sebastian Baum (seb.baum@googlemail.com)
