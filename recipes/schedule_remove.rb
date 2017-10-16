@@ -7,4 +7,4 @@
 ### Remove the crontab entry for the scheduler
 cron "laravel-scheduler" do 
     action :delete
- end
+end
