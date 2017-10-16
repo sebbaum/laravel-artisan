@@ -46,10 +46,32 @@ action :run do
 
 end
 
-#action :schedule_run do
-#
-#end
+### Start the laravel artisan scheduler
+action :start do
 
-#action :schedule_remove do
-#
-#end
+	check_artisan
+
+	### Add crontab entry
+	cron "laravel-scheduler" do
+		minute '*'
+    	hour '*'
+    	day '*'
+    	month '*'
+    	weekday '*'
+    	command "php #{new_resource.path}/artisan #{new_resource.command}"
+    	action :create
+    	user 'ubuntu'
+    end
+
+end
+
+### Stop the laravel artisan scheduler
+action :stop do	
+
+	### Remove crontab entry
+	cron "laravel-scheduler" do 
+		user 'ubuntu'
+    	action :delete
+    end
+
+end

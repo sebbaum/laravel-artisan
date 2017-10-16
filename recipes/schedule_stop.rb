@@ -5,6 +5,7 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 ### Remove the crontab entry for the scheduler
-cron "laravel-scheduler" do 
-    action :delete
+artisan 'stop scheduler' do
+	path node['laravel-artisan']['path']
+	action :stop
 end
