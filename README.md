@@ -39,7 +39,7 @@ Supported Environments:
 Currently none.
 
 ## Usage
-Place a dependency on the mysql cookbook in your cookbook's metadata.rb
+Place a dependency on the laravel-artisan cookbook in your cookbook's metadata.rb
 
 ```ruby
 depends 'laravel-artisan'
@@ -79,7 +79,7 @@ Using AWS Opsworks you can pass in the path via custom json:
 }
 ```
 
-### Recipes
+## Recipes
 * `laravel-artisan::clear-compiled`	  -	Remove the compiled class file
 * `laravel-artisan::down` 				    - Put the application into maintenance mode.
 * `laravel-artisan::env`				      - Display the current framework environment.
@@ -94,8 +94,53 @@ Using AWS Opsworks you can pass in the path via custom json:
 * `laravel-artisan::route_cache`      - Create a route cache file for faster route registration
 * `laravel-artisan::route_clear`      - Remove the route cache file.
 * `laravel-artisan::schedule_run`		  - Run the scheduled commands.
-* `laravel-artisan::schedule_remove`  -	Remove the cronjob that runs `php artisan schedule:run`
+* `laravel-artisan::schedule_stop`    -	Remove the cronjob that runs `php artisan schedule:run`
 * `laravel-artisan::view_clear`			  - Clear all compiled view files.
+
+## Resources
+
+### artisan
+Use this resource to run artisan cammands in other cookbooks.
+
+#### Actions
+* `run` - Run an artisan command
+
+#### Properties
+* `path` - (required) Path where the artisan file is located.
+* `command` - (optional) Artisan command that should be run. By default it's assumed that the name of the artisan resource is the command, but this allows overriding that.
+* `check` - (optional) By default it is checked, that there is an artisan file at the given `path`. However this check can be disabled.
+* `verbosity` - (optional) Configure how verbos the artisan command should be. Default is '-v'.
+
+### artisan_schedule
+
+#### Actions
+* `create` - Create a cron entry to run the artisan schedule:run command.
+* `remove` - Remove the cron entry to stop the artisan schedule:run command.
+
+#### Properties
+* `path` - (required) Path where the artisan file is located.
+* `command` - (optional) Artisan command that should be run. By default it's assumed that the name of the artisan resource is the command, but this allows overriding that.
+* `check` - (optional) By default it is checked, that there is an artisan file at the given `path`. However this check can be disabled.
+* `verbosity` - (optional) Configure how verbos the artisan command should be. Default is '-v'.
+* `user` - (optional) Choose the crontab of a user, who should run the command.
+
+### artisan_queue
+
+#### Actions
+* `start` - Install supervisor and add a configuration that enables a supervised artisan queue:work command.
+* `stop` - Stops the supervised artisan queue:work command.
+
+#### Properties
+* `worker_name` - (required) Name of the supervisor worker process
+* `path` - (required) Path where the artisan file is located.
+* `configuration` - (required) A Hash that contains the configuration for the supervisor configuration file.
+* `conf_dir` - (optional) Directory where supervisor conf files are located. By default this is: `'/etc/supervisor/conf.d'`.
+* `check` - (optional) By default it is checked, that there is an artisan file at the given `path`. However this check can be disabled.
+* `verbosity` - (optional) Configure how verbos the artisan command should be. Default is '-v'.
+* `owner`- (optional) Owner of the configuration file. By default this is `'root'`.
+* `group`- (optional) Group of the configuration file. By default this is `'root'`.
+* `mode`- (optional) Mode of the configuration file. By default this is `'0644'`.
+
 
 ## License and Authors
 

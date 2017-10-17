@@ -1,13 +1,13 @@
 resource_name :artisan_queue
 
 property :worker_name, String, required: true
-property :conf_dir, String, default: '/etc/supervisor/conf.d'
+property :path, String, required: true
 property :configuration, Hash, required: true
+property :conf_dir, String, default: '/etc/supervisor/conf.d'
+property :check, [true, false], default: true
 property :owner, String, default: 'root'
 property :group, String, default: 'root'
 property :mode, String, default: '0644'
-property :path, String, required: true
-property :check, [true, false], default: true
 
 default_action :start
 

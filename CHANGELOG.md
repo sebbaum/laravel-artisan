@@ -1,9 +1,10 @@
 # Laravel-Artisan Cookbook Changelog
 
 ## 1.0.0
-* Introduced a custom resource to run custom artisan cammands
-* Refactored all recipes to use the new custom resource
-* Introduced another custom resource for laravel artisan queues
+* Introduced a custom resource to run custom artisan cammands.
+* Introduced a custom resource for laravel artisan queues.
+* Introduced a custom resource for laravel artisan schedule.
+* Refactored all recipes to use the new custom resource.
 
 ## 0.6.0
 * Added support for `php artisan route cache`
