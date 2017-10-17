@@ -7,5 +7,5 @@
 ### Add a crontab entry to run laravel artisan scheduler
 artisan 'schedule:run >> /dev/null 2>&1' do
 	path node['laravel-artisan']['path']
-	action :start
+	action :create
 end

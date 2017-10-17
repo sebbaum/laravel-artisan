@@ -8,6 +8,7 @@ property :command, String, name_property: true
 property :check, [true, false], default: true
 property :path, String, required: true
 property :verbosity, String, default: '-v'
+property :user, String, default: 'root'
 
 action_class do
 
@@ -46,8 +47,8 @@ action :run do
 
 end
 
-### Start the laravel artisan scheduler
-action :start do
+### Create the laravel artisan scheduler
+action :create do
 
 	check_artisan
 
@@ -59,18 +60,18 @@ action :start do
     	month '*'
     	weekday '*'
     	command "php #{new_resource.path}/artisan #{new_resource.command}"
+    	user new_resource.user
     	action :create
-    	user 'ubuntu'
     end
 
 end
 
-### Stop the laravel artisan scheduler
-action :stop do	
+### Remove the laravel artisan scheduler
+action :remove do
 
 	### Remove crontab entry
 	cron "laravel-scheduler" do 
-		user 'ubuntu'
+		user new_resource.user
     	action :delete
     end
 
