@@ -10,26 +10,10 @@ property :path, String, required: true
 property :verbosity, String, default: '-v'
 property :user, String, default: 'root'
 
+
 action_class do
 
-	### Determine if artisan file exists at given path
-	def artisan_exists
-		::File.exists?("#{new_resource.path}/artisan")
-	end
-
-	# Throw an Exception if artisan file does not exist.
-	def check_artisan
-		if new_resource.check
-			unless artisan_exists
-				raise(Exception, "No artisan file at the given locatation: #{new_resource.path}")
-			end
-
-			# Log that all checks have passed
-			log 'checking laravel artisan prerequisits' do
-				message 'Laravel artisan prerequisits check [SUCCESS]'
-			end
-		end
-	end
+	include Artisan::Check
 
 end
 
