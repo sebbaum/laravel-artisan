@@ -2,14 +2,13 @@
 
 resource_name :artisan
 
-default_action :run
-
 property :command, String, name_property: true
 property :check, [true, false], default: true
 property :path, String, required: true
 property :verbosity, String, default: '-v'
 property :user, String, default: 'root'
 
+default_action :run
 
 action_class do
 

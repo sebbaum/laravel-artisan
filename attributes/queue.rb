@@ -1,5 +1,4 @@
 default['laravel-artisan']['queue']['worker_name'] = 'laravel-worker'
-default['laravel-artisan']['queue']['command'] = "php #{node['laravel-artisan']['path']}/artisan queue:work"
 default['laravel-artisan']['queue']['autostart'] = true
 default['laravel-artisan']['queue']['autorestart'] = true
 default['laravel-artisan']['queue']['redirect_stderr'] = true

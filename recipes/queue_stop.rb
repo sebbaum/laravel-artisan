@@ -5,21 +5,8 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-### Remove the supervisor configuration for queue:work
-file "remove supervisor conf for #{node['laravel-artisan']['queue']['worker_name']}" do
-  path "#{node['laravel-artisan']['supervisor']['conf_dir']}/#{node['laravel-artisan']['queue']['worker_name']}.conf"
-  action :delete
+artisan_queue 'stop queue' do
+	worker_name node['laravel-artisan']['queue']['worker_name']
+  	configuration node['laravel-artisan']['queue']
+  	action :stop
 end
-
-### Stop supervisor
-service 'stop supervisor' do
-  service_name 'supervisor'
-  action :stop
-end
-
-### Start supervisor
-service 'start supervisor' do
-  service_name 'supervisor'
-  action :start
-end
-
