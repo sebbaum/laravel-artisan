@@ -1,5 +1,8 @@
 # Laravel-Artisan Cookbook Changelog
 
+## 1.0.1
+* Adding some config params for supervisor [#1](https://github.com/sebbaum/laravel-artisan/pull/1)
+
 ## 1.0.0
 * Introduced a custom resource to run custom artisan cammands.
 * Introduced a custom resource for laravel artisan queues.
