@@ -5,3 +5,5 @@ default['laravel-artisan']['queue']['redirect_stderr'] = true
 default['laravel-artisan']['queue']['user'] = 'www-data'
 default['laravel-artisan']['queue']['stdout_logfile'] = "/var/log/supervisor/#{node['laravel-artisan']['queue']['worker_name']}.log"
 default['laravel-artisan']['queue']['numprocs'] = 1
+default['laravel-artisan']['queue']['startretries'] = 3
+default['laravel-artisan']['queue']['startsecs'] = 1
