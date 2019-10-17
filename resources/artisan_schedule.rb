@@ -26,9 +26,10 @@ action :create do
     	day '*'
     	month '*'
     	weekday '*'
-    	command "php #{new_resource.path}/artisan #{new_resource.command}"
+    	command "php artisan #{new_resource.command}"
     	user new_resource.user
     	action :create
+    	home "#{new_resource.path}"
     end
 
 end
