@@ -26,7 +26,7 @@ action :create do
     	day '*'
     	month '*'
     	weekday '*'
-    	command "php #{new_resource.path}/artisan #{new_resource.command}"
+    	command "cd #{new_resource.path} && php artisan #{new_resource.command}"
     	user new_resource.user
     	action :create
     end
