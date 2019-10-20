@@ -1,5 +1,8 @@
 # Laravel-Artisan Cookbook Changelog
 
+## 1.0.2
+* Fixed path to artisan file in schedule run command. [#2](https://github.com/sebbaum/laravel-artisan/pull/2)
+
 ## 1.0.1
 * Adding some config params for supervisor [#1](https://github.com/sebbaum/laravel-artisan/pull/1)
 
